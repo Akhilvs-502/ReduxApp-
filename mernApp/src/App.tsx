@@ -1,11 +1,20 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import { Home } from './pages/Home'
+import { About } from './pages/About'
 
 function App() {
 
   return (
     <>
-     <h1 className='text-green-500'>hioooo</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}> </Route>
+      <Route path="/about" element={<About/>}></Route>
+      {/* <Route path="/sign-in" element={<Signi/>}></Route> */}
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
